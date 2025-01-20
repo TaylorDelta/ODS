@@ -192,9 +192,9 @@ def plot_results(theta_list):
             t1_vals = (bi - ai[1] * t2) / ai[0]
             plt.plot(t1_vals, t2, label=f'Constraint {i + 1}')
         elif ai[0] == 0:
-            plt.axvline(bi / ai[1], label=f'Constraint {i + 1}')
+            plt.axhline(bi / ai[1], label=f'Constraint {i + 1}')
         elif ai[1] == 0:
-            plt.axhline(bi / ai[0], label=f'Constraint {i + 1}')
+            plt.axvline(bi / ai[0], label=f'Constraint {i + 1}')
 
     # Plot trajectory of theta_k points
     theta_array = np.array(theta_list)
